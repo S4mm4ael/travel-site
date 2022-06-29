@@ -1,5 +1,5 @@
 // Custom Scripts
-// Мобильное меню бургер
+
 function burgerMenu() {
   const burger = document.querySelector('.burger')
   const menu = document.querySelector('.menu')
@@ -31,11 +31,11 @@ function burgerMenu() {
 burgerMenu()
 
 
-// Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.
+
 function fixedNav() {
   const nav = document.querySelector('nav')
 
-  // тут указываем в пикселях, сколько нужно проскроллить что бы наше меню стало фиксированным
+ 
   const breakpoint = 1
   if (window.scrollY >= breakpoint) {
     nav.classList.add('fixed__nav')
@@ -45,3 +45,4 @@ function fixedNav() {
 }
 window.addEventListener('scroll', fixedNav)
 
+console.log('Mark is 100/100');

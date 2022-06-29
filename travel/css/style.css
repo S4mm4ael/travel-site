@@ -496,6 +496,10 @@ footer {
   cursor: pointer;
 }
 
+.destination__points .point:nth-child(2) {
+  background-color: #F2785C;
+}
+
 .destination__btn {
   display: -webkit-box;
   display: -ms-flexbox;
