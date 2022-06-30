@@ -442,7 +442,9 @@ footer {
   border-radius: 16px;
   background-size: cover;
 }
-
+.destination__container {
+  padding: 0;
+}
 .destination__item:nth-child(1) {
   margin-left: -560px;
   background-image: url(../img/Destination_1.jpg);
