@@ -423,7 +423,7 @@ footer {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  max-width: 1440px;
+  width: 1440px;
   gap: 60px;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
