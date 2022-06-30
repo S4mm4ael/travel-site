@@ -446,7 +446,7 @@ footer {
   padding: 0;
 }
 .destination__item:nth-child(1) {
-  margin-left: -560px;
+  margin-left: -540px;
   background-image: url(../img/Destination_1.jpg);
 }
 
