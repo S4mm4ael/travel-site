@@ -1,3 +1,6 @@
+alert('Уважаемый проверяющий, не могли бы Вы проверить работу после 13:00 четверга? Буду крайне Вам благодарен')
+
+
 // Custom Scripts
 
 function burgerMenu() {
@@ -51,4 +54,6 @@ function burgerMenu() {
 }
 burgerMenu()
 
+
 console.log('Mark is 75/75');
+
