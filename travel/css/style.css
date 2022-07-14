@@ -205,7 +205,8 @@ footer {
 }
 @media (max-width:580px) {
   .footer__list {
-    margin: 0 auto;
+    margin-left: -6px;
+    margin-top: -3px;
   }
 }
 .credits {
