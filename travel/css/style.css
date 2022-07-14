@@ -205,7 +205,8 @@ footer {
 }
 @media (max-width:580px) {
   .footer__list {
-    margin: 0 auto;
+    margin-left: -6px;
+    margin-top: -3px;
   }
 }
 .credits {
@@ -873,6 +874,9 @@ footer {
   .navbar {
   background-color: rgba(242, 120, 92, 0);
 }
+  .steps__icon:first-child{
+  margin-left: -6px;
+}
 .hidden {
   display: block;
 }
@@ -888,10 +892,11 @@ footer {
   width: 29px;
   height: 30px;
   margin-top: 30px;
-  margin-left: 2px;
+  margin-left: 20px;
 }
 .burger {
   margin-top: 30px;
+  margin-right: 20px;
 }
 .credits {
   display: none;
