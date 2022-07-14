@@ -874,6 +874,9 @@ footer {
   .navbar {
   background-color: rgba(242, 120, 92, 0);
 }
+  .steps__icon:first-child{
+  margin-left: -6px;
+}
 .hidden {
   display: block;
 }
