@@ -892,10 +892,11 @@ footer {
   width: 29px;
   height: 30px;
   margin-top: 30px;
-  margin-left: 2px;
+  margin-left: 20px;
 }
 .burger {
   margin-top: 30px;
+  margin-right: 20px;
 }
 .credits {
   display: none;
