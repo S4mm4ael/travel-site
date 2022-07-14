@@ -203,12 +203,7 @@ footer {
   display: flex;
   gap: 20px;
 }
-@media (max-width:580px) {
-  .footer__list {
-    margin-left: -6px;
-    margin-top: -3px;
-  }
-}
+
 .credits {
   margin-left: auto;
 }
@@ -1091,3 +1086,9 @@ footer {
     .explore__search {
       max-width: 300px;
   }}
+@media (max-width:580px) {
+  .footer__list {
+    margin-left: -6px;
+    margin-top: -3px;
+  }
+}
