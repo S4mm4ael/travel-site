@@ -8,19 +8,21 @@ function burgerMenu() {
   const body = document.querySelector('body')
   const navBtns = document.querySelector('.nav__btns')
   const navLinks = document.querySelectorAll('.menu__item');
-
+  const popup = document.querySelector('.popup');
 
   function closeBurger (){
       menu.classList.remove('active')
       burger.classList.remove('active-burger')
       body.classList.remove('locked')
       navBtns.classList.remove('active')
+      popup.classList.remove('popup--open');
   }
   function openBurger (){
       menu.classList.add('active')
       burger.classList.add('active-burger')
       body.classList.add('locked')
       navBtns.classList.add('active')
+      popup.classList.add('popup--open');
 }
 
 
