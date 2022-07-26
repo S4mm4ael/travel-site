@@ -92,37 +92,53 @@
         <h2 class="section__title">
           POPULAR DESTINATIONS
         </h2>
-        <div class="destination__arrow destination__arrow--left inactive"></div>
+        
         <div class="destination">
 
-          <div class="destination__item">
-            <p class="destination__text">
-              SPAIN
-            </p>
-          </div>
-          <div class="destination__item">
-            <p class="destination__text">
-              JAPAN
-            </p>
-          </div>
-          <div class="destination__item">
+          <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <div class="destination__item">
+          <img src="./img/Destination_1.jpg" alt="spain">
+          <p class="destination__text">
+            SPAIN
+          </p>
+        </div>
+      </div>
+      <div class="swiper-slide swiper-slide-active">
+        <div class="destination__item">
+          <img src="./img/Destination_2.jpg" alt="JAPAN">
+          <p class="destination__text">
+            JAPAN
+          </p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="destination__item">
+          <img src="./img/Destination_3.jpg" alt="USA">
             <p class="destination__text">
               USA
             </p>
           </div>
-
-        </div>
-        <div class="destination__arrow destination__arrow--right"></div>
-        <div class="destination__points">
-          <span class="point " id="point_1"></span>
-          <span class="point inactive" id="point_2"></span>
-          <span class="point inactive" id="point_3"></span>
-        </div>
-        <button class="btn destination__btn">
-          <img class="btn__arrow" src="./img/arrow-right.svg" alt="arrow">
-          Find More
-        </button>
       </div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+</div>
+        
+      </div>
+      <button class="btn destination__btn">
+        <img class="btn__arrow" src="./img/arrow-right.svg" alt="arrow">
+        Find More
+      </button>
     </section>
     <section id="stories" class="section__stories">
       <h2 class="section__title stories__title">
@@ -226,7 +242,7 @@
   </footer>
   <div class="popup"></div>
   <!-- Modal -->
-  <div class="modal__wrapper" style="display: flex">
+  <div class="modal__wrapper" style="display: none">
     <div class="modal">
       <div class="modal__close" > <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px" ></div>
       <div class="modal__title"><span>Log in to your account</span> </div>
