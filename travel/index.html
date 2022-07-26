@@ -25,7 +25,7 @@
             <li class="menu__item"><a href="#steps" class="menu__item-link" data-scroll>Plan Your Trip</a></li>
             <li class="menu__item"><a href="#destinations" class="menu__item-link" data-scroll>Destinations</a></li>
             <li class="menu__item"><a href="#stories" class="menu__item-link" data-scroll>Travel Stories</a></li>
-            <li class="menu__item hidden"><a href="#" class="menu__item-link" data-scroll>Account</a></li>
+            <li class="menu__item hidden menu__item--account btn__login"><a href="#" class="menu__item-link " data-scroll>Account</a></li>
             <li class="menu__item hidden"><a href="#social" class="menu__item-link" data-scroll>Social media</a></li>
           </ul>
           <button class="btn nav__btns btn__login">Login</button>
@@ -92,37 +92,53 @@
         <h2 class="section__title">
           POPULAR DESTINATIONS
         </h2>
-        <div class="destination__arrow destination__arrow--left inactive"></div>
+        
         <div class="destination">
 
-          <div class="destination__item">
-            <p class="destination__text">
-              SPAIN
-            </p>
-          </div>
-          <div class="destination__item">
-            <p class="destination__text">
-              JAPAN
-            </p>
-          </div>
-          <div class="destination__item">
+          <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <div class="destination__item">
+          <img src="./img/Destination_1.jpg" alt="spain">
+          <p class="destination__text">
+            SPAIN
+          </p>
+        </div>
+      </div>
+      <div class="swiper-slide swiper-slide-active">
+        <div class="destination__item">
+          <img src="./img/Destination_2.jpg" alt="JAPAN">
+          <p class="destination__text">
+            JAPAN
+          </p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="destination__item">
+          <img src="./img/Destination_3.jpg" alt="USA">
             <p class="destination__text">
               USA
             </p>
           </div>
-
-        </div>
-        <div class="destination__arrow destination__arrow--right"></div>
-        <div class="destination__points">
-          <span class="point " id="point_1"></span>
-          <span class="point inactive" id="point_2"></span>
-          <span class="point inactive" id="point_3"></span>
-        </div>
-        <button class="btn destination__btn">
-          <img class="btn__arrow" src="./img/arrow-right.svg" alt="arrow">
-          Find More
-        </button>
       </div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+</div>
+        
+      </div>
+      <button class="btn destination__btn">
+        <img class="btn__arrow" src="./img/arrow-right.svg" alt="arrow">
+        Find More
+      </button>
     </section>
     <section id="stories" class="section__stories">
       <h2 class="section__title stories__title">
@@ -225,6 +241,26 @@
     </div>
   </footer>
   <div class="popup"></div>
+  <!-- Modal -->
+  <div class="modal__wrapper" style="display: none">
+    <div class="modal">
+      <div class="modal__close" > <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px" ></div>
+      <div class="modal__title"><span>Log in to your account</span> </div>
+      <div class="modal__body">
+        <div class="modal__input modal__input--facebook"><div class="modal__logo modal__logo--facebook"></div> Sign In with Facebook</div>
+        <div class="modal__input modal__input--google"><div class="modal__logo modal__logo--google"></div>Sign In with Google</div>
+        <div class="modal__input modal__input--or"><span class="modal__line"></span>or<span class="modal__line"></span></div>
+        <p class="input__p">E-mail</p>
+        <input id = "email" type="email" class="modal__input modal__input--regular"></input>
+        <span class="input__p">Password</span>
+        <input id = "password" type="password" class="modal__input modal__input--regular"></i>
+        <div class="modal__input modal__input--signin" >Sign in</div>
+        <a class="modal__a" href="#">Forgot Your Password?</a>
+        <span class="modal__line"></span>
+        <p class="modal__register">Dont have an account?<a id = "register" class="modal__a" href="#">Register</a></p>
+      </div>
+    </div>
+  </div>
   <script src="./js/scripts.js"></script>
 </body>
 
