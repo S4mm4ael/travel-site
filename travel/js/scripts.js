@@ -56,17 +56,17 @@ function burgerMenu() {
 burgerMenu()
 
 function bindModal(trigger, modal, close) {
-  trigger = document.querySelector(trigger),
+    trigger = document.querySelectorAll(trigger),
     modal = document.querySelector(modal),
     close = document.querySelector(close)
 
   const body = document.body
 
-  trigger.addEventListener('click', e => {
+  trigger.forEach( (trigger) => trigger.addEventListener('click', e => {
     e.preventDefault()
     modal.style.display = 'flex'
     body.classList.add('locked')
-  });
+  }))
   close.addEventListener('click', () => {
     modal.style.display = 'none'
      body.classList.remove('locked')
@@ -77,12 +77,82 @@ function bindModal(trigger, modal, close) {
        body.classList.remove('locked')
     }
   })
+
+  var register = document.getElementById('register');
+  
+    register.addEventListener('click', e =>{
+      if (e.target === register){
+
+       
+
+        modal.innerHTML = ` 
+        <div class="modal" style = "height: 436px">
+        <div class="modal__close" > <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px" ></div>
+        <div class="modal__title" style="margin-bottom: 30px"><span>Create account</span> </div>
+        <div class="modal__body">
+          <p class="input__p">E-mail</p>
+          <input id = "email" type="email" class="modal__input modal__input--regular"></input>
+          <span class="input__p">Password</span>
+          <input id = "password" type="password" class="modal__input modal__input--regular"></i>
+          <div class="modal__input modal__input--signin" style="margin-bottom: 26px">Sign up</div>
+          <span class="modal__line"></span>
+          <p class="modal__register">Already have an account?<a id = "login-link" class="modal__a" href="#">Log in</a></p>
+        </div>
+        </div>`;
+        loginAttempt ()
+      }
+      const loginLink = document.getElementById('login-link');
+      loginLink.addEventListener('click', e =>{
+      if (e.target === loginLink){
+        modal.innerHTML = ` 
+        <div class="modal">
+        <div class="modal__close" > <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px" ></div>
+        <div class="modal__title"><span>Log in to your account</span> </div>
+        <div class="modal__body">
+        <div class="modal__input modal__input--facebook"><div class="modal__logo modal__logo--facebook"></div> Sign In with Facebook</div>
+        <div class="modal__input modal__input--google"><div class="modal__logo modal__logo--google"></div>Sign In with Google</div>
+        <div class="modal__input modal__input--or"><span class="modal__line"></span>or<span class="modal__line"></span></div>
+        <p class="input__p">E-mail</p>
+        <input id = "email" type="email" class="modal__input modal__input--regular"></input>
+        <span class="input__p">Password</span>
+        <input id = "password" type="password" class="modal__input modal__input--regular"></i>
+        <div class="modal__input modal__input--signin" >Sign in</div>
+        <a class="modal__a" href="#">Forgot Your Password?</a>
+        <span class="modal__line"></span>
+        <p class="modal__register">Dont have an account?<a id = "register" class="modal__a" href="#">Register</a></p>
+        </div>
+        </div>`;
+
+      bindModal('.btn__login', '.modal__wrapper', '.modal__close')
+      //bindModal('.menu__item--account', '.modal__wrapper', '.modal__close')
+    }
+    });
+  });
+  loginAttempt ()
+     
+  
 }
 
-// ПЕРВЫЙ аргумент - класс кнопки, при клике на которую будет открываться модальное окно.
-// ВТОРОЙ аргумент - класс самого модального окна.
-// ТРЕТИЙ аргумент - класс кнопки, при клике на которую будет закрываться модальное окно.
 bindModal('.btn__login', '.modal__wrapper', '.modal__close')
+
+function loginAttempt (){
+  const email = document.getElementById("email");
+  const password = document.getElementById("password");
+  const login = document.querySelector('.modal__input--signin');
+
+  login.addEventListener('click', e =>{
+    if (e.target === login){
+      alert (` Email is: ${email.value} \n Password is: ${password.value}`)
+    }
+  })
+  
+}
+
+
+
+
+
+
 
 console.log('Mark is 100/100');
 
