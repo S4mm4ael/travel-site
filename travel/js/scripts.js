@@ -55,6 +55,34 @@ function burgerMenu() {
 }
 burgerMenu()
 
+function bindModal(trigger, modal, close) {
+  trigger = document.querySelector(trigger),
+    modal = document.querySelector(modal),
+    close = document.querySelector(close)
 
-console.log('Mark is 75/75');
+  const body = document.body
+
+  trigger.addEventListener('click', e => {
+    e.preventDefault()
+    modal.style.display = 'flex'
+    body.classList.add('locked')
+  });
+  close.addEventListener('click', () => {
+    modal.style.display = 'none'
+     body.classList.remove('locked')
+  });
+  modal.addEventListener('click', e => {
+    if (e.target === modal) {
+      modal.style.display = 'none'
+       body.classList.remove('locked')
+    }
+  })
+}
+
+// ПЕРВЫЙ аргумент - класс кнопки, при клике на которую будет открываться модальное окно.
+// ВТОРОЙ аргумент - класс самого модального окна.
+// ТРЕТИЙ аргумент - класс кнопки, при клике на которую будет закрываться модальное окно.
+bindModal('.btn__login', '.modal__wrapper', '.modal__close')
+
+console.log('Mark is 100/100');
 
