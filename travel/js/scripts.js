@@ -1,4 +1,4 @@
-alert("Уважаемый проверяющий! Не могли бы Вы дать сутки на приведение слайдера к условиям задания? Буду очень благодарен")
+alert("Уважаемый проверяющий! Не могли бы Вы дать сутки на приведения слайдера к адаптивному макету? Буду очень благодарен")
 
 // Custom Scripts
 
@@ -167,6 +167,10 @@ console.log('Mark is 100/100');
 
 const swiper = new Swiper('.swiper', {
   loop: true,
+  slideToClickedSlide: true,
+  slidesPerView: 2.2,
+  initialSlide: 1,
+  spaceBetween: 410,
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
@@ -178,13 +182,8 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-
 //   // Responsive breakpoints
-//   breakpoints: {
+ breakpoints: {
 //   // when window width is >= 320px
 //   320: {
 //     slidesPerView: 3,
@@ -195,7 +194,7 @@ const swiper = new Swiper('.swiper', {
 //     slidesPerView: 3,
 //     spaceBetween: 30
 //   },
-// }
+}
 });
 
 
