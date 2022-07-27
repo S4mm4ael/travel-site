@@ -362,51 +362,21 @@ footer {
 }
 .destination {
   padding-top: 46px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
   max-width: 1440px;
-  gap: 60px;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   padding-bottom: 24px;
-  margin: 0;
+  
 }
-.destination__arrow {
-  display: none;
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  background-image: url(../img/destination_arrow.svg);
-  z-index: 3;
+.destination__item{
+  padding-left: 95px;
 }
-.destination__arrow--left {
-  bottom: 135px;
-  left: 25px;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-.destination__arrow--right {
-  bottom: 135px;
-  right: 20px;
-}
-.destination__item {
-  position: relative;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  width: 800px;
-  height: 800px;
-  border-radius: 16px;
-  background-size: cover;
-  margin: 0 auto;
-}
+
 
 .destination__text {
   position: absolute;
   bottom: 40px;
-  left: 15px;
+  left: 120px;
   font-family: "Red Hat Text", sans-serif;
   color: #fff;
   font-style: normal;
@@ -414,36 +384,7 @@ footer {
   font-size: 32px;
   line-height: 42px;
 }
-.destination__points {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  gap: 10px;
-  padding-bottom: 40px;
-}
-.destination__points .point {
-  display: block;
-  height: 20px;
-  width: 20px;
-  border-radius: 10px;
-  background-color: #f2785c;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
-}
-.destination__points .point:active, .destination__points .point:hover {
-  background-color: #f2785c;
-  cursor: pointer;
-}
-.destination__points .point:nth-child(2) {
-  background-color: #f2785c;
-}
+
 .destination__btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1326,6 +1267,7 @@ margin-right: auto;
   height: 100%;
   position: relative;
   transition-property: transform;
+  margin: 0 40px;
 }
 .swiper-slide-invisible-blank {
   visibility: hidden;
@@ -1797,4 +1739,9 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: hidden;
+}
+@media (min-width:500px) {
+  .swiper-button-next, .swiper-button-prev {
+    display: none;
+  }
 }
