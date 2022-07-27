@@ -366,17 +366,23 @@ footer {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   padding-bottom: 24px;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .destination__item{
-  padding-left: 95px;
+  position: relative;
 }
-
+.destination__img{
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
 
 .destination__text {
   position: absolute;
   bottom: 40px;
-  left: 120px;
+  left: 40px;
   font-family: "Red Hat Text", sans-serif;
   color: #fff;
   font-style: normal;
@@ -1065,15 +1071,8 @@ margin-right: auto;
   position: relative;
   padding-bottom: 15px;
 }
-.destination__arrow {
-  display: block;
-}
-.destination__item:nth-child(1) {
-  display: block;
-  margin-left: 0;
-  height: 210px;
-  background-image: url(../img/Destination_1_390.jpg);
-}
+
+
 .destination__item:nth-child(2) {
   display: none;
 }
@@ -1161,17 +1160,27 @@ margin-right: auto;
   .btn__arrow {
     height: 13px;
   }
+  .destination__text{
+    display: none;
+  }
+  .destination__img{
+    display: none;
+  }
+  .destination
   .destination__item:nth-child(1) {
     display: block;
-    margin-left: 0;
+    margin-left: 10px;
     height: 210px;
+    border-radius: 10px;
+  }
+  .destination__item--1 {
     background-image: url(../img/Destination_1_390.jpg);
   }
-  .destination__item:nth-child(2) {
-    display: none;
+  .destination__item--2 {
+    background-image: url(../img/Destination_2_390.jpg);
   }
-  .destination__item:nth-child(3) {
-    display: none;
+  .destination__item--3 {
+    background-image: url(../img/Destination_3_390.jpg);
   }
  
   }
@@ -1267,7 +1276,7 @@ margin-right: auto;
   height: 100%;
   position: relative;
   transition-property: transform;
-  margin: 0 40px;
+  margin: 0 auto;
 }
 .swiper-slide-invisible-blank {
   visibility: hidden;
@@ -1743,5 +1752,31 @@ button.swiper-pagination-bullet {
 @media (min-width:500px) {
   .swiper-button-next, .swiper-button-prev {
     display: none;
+  }
+}
+@media (max-width:1350px) {
+  .destination__text {
+    left: 20%;
+  }
+}
+@media (max-width:1050px) {
+  .destination__text {
+    left: 15%;
+  }
+  .destination__img{
+    height: 600px;
+  }
+}
+@media (max-width:768px) {
+  .destination__text {
+    left: 10%;
+  }
+}
+@media (max-width:620px) {
+  .destination__text {
+    left: 20%;
+  }
+  .destination__img{
+    height: 400px;
   }
 }
