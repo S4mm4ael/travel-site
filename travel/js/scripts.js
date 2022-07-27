@@ -1,4 +1,4 @@
-alert("Уважаемый проверяющий! Не могли бы Вы дать сутки на приведения слайдера к адаптивному макету? Буду очень благодарен")
+
 
 // Custom Scripts
 
@@ -166,11 +166,10 @@ console.log('Mark is 100/100');
 
 
 const swiper = new Swiper('.swiper', {
-  loop: true,
+  loop: false,
   slideToClickedSlide: true,
-  slidesPerView: 2.2,
   initialSlide: 1,
-  spaceBetween: 410,
+  centeredSlides: true,
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
@@ -185,15 +184,14 @@ const swiper = new Swiper('.swiper', {
 //   // Responsive breakpoints
  breakpoints: {
 //   // when window width is >= 320px
-//   320: {
-//     slidesPerView: 3,
-//     spaceBetween: 20
-//   },
+   1350: {
+    slidesPerView: 1.8,
+    spaceBetween: 100,
+   },
 //   // when window width is >= 480px
-//   480: {
-//     slidesPerView: 3,
-//     spaceBetween: 30
-//   },
+   560: {
+     slidesPerView: 1,
+   },
 }
 });
 
